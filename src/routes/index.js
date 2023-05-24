@@ -14,9 +14,20 @@ router.get('/', (request, response) => {
 	response.json(person)
 })
 
-
 router.get('/products', (request, response) => {
 	response.json(products)
+})
+
+router.get('/products/:category', (request, response) => {
+	const { category } = request.params
+
+	const filteredProducts = products.filter(function(product) {
+		const productCategory = product.category.toLowerCase()
+		const paramCategory = category.toLowerCase()
+		return productCategory === paramCategory
+	})
+
+	response.json(filteredProducts)
 })
 
 export default router
