@@ -1,4 +1,4 @@
-# assignment02-api
+# bts-session03-backend
 
 This project is a demo API made with Node.js for the Master in Digital Product Management of the Barcelona Technology School. 
 
